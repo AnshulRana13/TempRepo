@@ -9,6 +9,8 @@ namespace AssignmentDemo.Provider.WebClient
     public interface IWebRequestHandler<T>
     {
         Task<List<T>> GetDataByAll(string url);
-      
+ 
+
+
     }
 }

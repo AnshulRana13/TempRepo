@@ -53,7 +53,7 @@ namespace AssignmentDemo.API.Controllers
             return Ok(_mapper.Map<List<AlbumDto>>(albums));
         }
         /// <summary>
-        /// Get Album by Id
+        /// Get Album by album Id
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
@@ -76,7 +76,7 @@ namespace AssignmentDemo.API.Controllers
 
 
         /// <summary>
-        /// 
+        /// Get Album by userId
         /// </summary>
         /// <param name="albumId"></param>
         /// <returns></returns>

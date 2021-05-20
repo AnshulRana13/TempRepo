@@ -46,10 +46,12 @@ namespace AssignmentDemo.API
         public void ConfigureServices(IServiceCollection services)
         {
             AppSettings.setConfiguration(this.Configuration);
+           
             services.AddMemoryCache();
             services.AddCorsPolicy();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddDependencyInjectionContainer(this.Configuration);
+            services.AddPollyContainerService();
             services.AddAppVersioning();
             services.AddSwaggerServiceConfiguration(Configuration, environment);
             services.AddControllers(setupAction =>
@@ -108,6 +110,7 @@ namespace AssignmentDemo.API
 
            });
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+          
         }
 
         /// <summary>

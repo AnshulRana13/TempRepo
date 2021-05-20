@@ -5,31 +5,29 @@ using System.Text;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace AssignmentDemo.Provider.WebClient
 {
     public class WebRequestHandler<T> : IWebRequestHandler<T>
     {
-        public async Task<List<T>> GetDataByAll(string url)
-        {
-            List<T> result = null;
-            try
-            {
-                var httpClient = HttpClientFactory.Create();
-                HttpResponseMessage httpResponseMessage = await httpClient.GetAsync(url);
-                if (httpResponseMessage.StatusCode == HttpStatusCode.OK)
-                {
-                    var content = httpResponseMessage.Content;
-                    var data = await content.ReadAsAsync<List<T>>();
-                    result = data;
-                }
-            }
-            catch
-            {
 
-            }
+        private readonly IHttpClientFactory _clientFactory;
+        public WebRequestHandler(IHttpClientFactory clientFactory)
+        {
+            _clientFactory = clientFactory;
+        }
+
+        public async Task<List<T>> GetDataByAll(string url)
+        {        
+            var client = _clientFactory.CreateClient("AssignmentDemo");
+            var response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+            var result = await response.Content.ReadAsAsync<List<T>>(); 
+
             return result;
         }
+  
 
     }
 }
