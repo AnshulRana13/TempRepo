@@ -1,0 +1,16 @@
+<table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">UserId</th>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let album of albums">
+        <th scope="row">{{album.userId}}</th>
+        <td>{{album.id}}</td>
+        <td>{{album.title}}</td>
+     </tr>
+    </tbody>
+  </table>

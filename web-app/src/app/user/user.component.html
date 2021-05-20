@@ -1,0 +1,23 @@
+<table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">User Name</th>
+        <th scope="col">Website</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Full Detail</th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let user of users">
+        <th scope="row">{{user.id}}</th>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.website}}</td>
+        <td><a [routerLink]="['/detail', user.id]" (click)="showDetails()">User Details</a></td>
+     </tr>
+    </tbody>
+  </table>
+

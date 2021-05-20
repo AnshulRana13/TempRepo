@@ -1,0 +1,34 @@
+version: '3.4'
+
+services:
+  assignmentdemo.api:
+    image: assignmentdemoapi
+    container_name: assignment_demo_api
+
+    depends_on:
+      - "redis_image"
+
+    build:
+      context: .
+      dockerfile: AssignmentDemo.API/Dockerfile
+          # Set access ports for localhost on the left
+    ports:
+      - "80:5000"
+      - "443:5001"
+
+    # Configure a link to Redis
+    links:
+      - "redis_image"
+
+    # The Application needs a connection string for Redis, this just needs to be the Redis Service name as defined below
+    # Pass it in as an Environmental Variable
+    environment:
+      - RedisConnection=redis_image
+
+  # The Redis Service, this label is required for the "Links" and Connection string
+  redis_image:
+    # Pull the image from Docker Hub
+    image: redis
+
+    # Give the container a name (any name you want)
+    container_name: redis.cache

@@ -1,0 +1,14 @@
+<div>
+    <h1>User Details</h1>
+    <hr/>
+    <div class="well hoverwell thumbnail">
+        <h2> {{user?.name}} </h2>
+       <div>User ID: {{user?.id}}</div>
+       <div>User Name: {{user?.username}}</div>
+       <div>
+           <span>Address : {{user?.address.street}}</span>
+           <span>&nbsp;</span>
+           <span>{{user?.address.city}}, {{user?.address.zipcode}}</span>
+       </div>
+    </div>
+</div>

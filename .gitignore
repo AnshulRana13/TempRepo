@@ -1,0 +1,64 @@
+/AssignmentDemo.API/bin/*
+/AssignmentDemo.API/obj/*
+/AssignmentDemo.API/.vs/*
+/AssignmentDemo.API/AssignmentDemo.API/bin/*
+/AssignmentDemo.API/AssignmentDemo.API/obj/*
+/AssignmentDemo.API/AssignmentDemo.Entities.API/bin/*
+/AssignmentDemo.API/AssignmentDemo.Entities.API/obj/*
+/AssignmentDemo.API/AssignmentDemo.Provider/bin/*
+/AssignmentDemo.API/AssignmentDemo.Provider/obj/*
+
+/AssignmentDemoAPI.Test/bin/*
+/AssignmentDemoAPI.Test/obj/*
+
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/web-app/dist
+/web-app/tmp
+/web-app/out-tsc
+# Only exists if Bazel was run
+/web-app/bazel-out
+
+# dependencies
+/web-app/node_modules
+
+# profiling files
+/web-appchrome-profiler-events*.json
+/web-appspeed-measure-plugin*.json
+
+# IDEs and editors
+/web-app/.idea
+/web-app/.project
+/web-app/.classpath
+/web-app/.c9
+*.launch
+/web-app/.settings/
+/web-app/*.sublime-workspace
+
+# IDE - VSCode
+/web-app/.vscode/*
+/web-app/!.vscode/settings.json
+/web-app/!.vscode/tasks.json
+/web-app/!.vscode/launch.json
+/web-app/!.vscode/extensions.json
+/web-app/.history/*
+
+# misc
+/web-app//.sass-cache
+/web-app//connect.lock
+/web-app/coverage
+/web-app/libpeerconnection.log
+/web-app/npm-debug.log
+/web-app/yarn-error.log
+/web-app/testem.log
+/web-app/typings
+
+# System Files
+/web-app/.DS_Store
+/web-app/Thumbs.db
+
+
+
+

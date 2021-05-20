@@ -1,0 +1,28 @@
+<div *ngIf="!isLoaded"><span class="spinner spnr">
+              Loading...
+          </span>>
+
+</div>
+
+
+<div *ngIf="isLoaded"> 
+
+<table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Url</th>
+        <th scope="col">Thumbnail</th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let photo of photos">
+        <th scope="row">{{photo.id}}</th>
+        <td>{{photo.title}}</td>
+        <td>{{photo.url}}"></td>
+        <td><img [src]="photo.thumbnailUrl"></td>
+     </tr>
+    </tbody>
+  </table>
+</div>

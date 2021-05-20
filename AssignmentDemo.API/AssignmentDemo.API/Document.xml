@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AssignmentDemo.API</name>
+    </assembly>
+    <members>
+        <member name="T:AssignmentDemo.API.Controllers.AlbumsController">
+            <summary>
+            Albums Controller
+            </summary>
+        </member>
+        <member name="M:AssignmentDemo.API.Controllers.AlbumsController.#ctor(AssignmentDemo.Provider.AlbumRequest.IAlbumRequestHandler,AutoMapper.IMapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="albumRequestHandler"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:AssignmentDemo.API.Controllers.AlbumsController.GetAlbums">
+            <summary>
+            Get Albums
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AssignmentDemo.API.Controllers.AlbumsController.GetAlbumByUserId(System.Int32)">
+            <summary>
+            Get Album by Id
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AssignmentDemo.API.Controllers.AlbumsController.GetAlbumsGroupBy(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="albumId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AssignmentDemo.API.Controllers.AlbumsController.AddAlbumForUser(AssignmentDemo.API.Models.Albums.AlbumCreationDto)">
+            <summary>
+            
+            </summary>
+            <param name="album"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AssignmentDemo.API.Controllers.AlbumsController.GetAlbumOptions">
+            <summary>
+            Get Allow Opertions for the endpoint
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:AssignmentDemo.API.Controllers.PhotosController">
+            <summary>
+            Photos Controller
+            </summary>
+              [ApiVersion("1")]
+        </member>
+        <member name="M:AssignmentDemo.API.Controllers.PhotosController.#ctor(AssignmentDemo.Provider.PhotoRequest.IPhotoRequestHandler,AutoMapper.IMapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="photoRequestHandler"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:AssignmentDemo.API.Controllers.PhotosController.GetPhotos">
+            <summary>
+            Get Photos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AssignmentDemo.API.Controllers.PhotosController.GetPhoto(System.Int32)">
+            <summary>
+            Get Photo By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AssignmentDemo.API.Controllers.PhotosController.GetPhotosOptions">
+            <summary>
+            Get Allow Opertions fot the endpoint
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:AssignmentDemo.API.Controllers.UsersController">
+            <summary>
+            User Controller
+            </summary>
+            [ApiVersion("1")]
+        </member>
+        <member name="M:AssignmentDemo.API.Controllers.UsersController.#ctor(AssignmentDemo.Provider.UserRequest.IUserRequestHandler,AutoMapper.IMapper)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="userRequestHandler"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:AssignmentDemo.API.Controllers.UsersController.GetUsers">
+            <summary>
+            Get Users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AssignmentDemo.API.Controllers.UsersController.GetUser(System.Int32)">
+            <summary>
+            Get User By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AssignmentDemo.API.Controllers.UsersController.GetUsersOptions">
+            <summary>
+            Get Allow Opertions for the endpoint
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:AssignmentDemo.API.Middleware.CorsConfigurationService.ALLOW_ALL_ORIGINS_POLICY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AssignmentDemo.API.Middleware.CorsConfigurationService.AddCorsPolicy(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:AssignmentDemo.API.Middleware.ExceptionHandlerService.UseExceptionHandlerService(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Configure Exception Handler
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:AssignmentDemo.API.Middleware.SwaggerService.AddSwaggerServiceConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Swagger Configure Services
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:AssignmentDemo.API.Middleware.SwaggerService.UseSwaggerUI(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Swagger Configuration For Application Builder
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="P:AssignmentDemo.API.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:AssignmentDemo.API.Startup.environment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AssignmentDemo.API.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            
+            <param name="_environment"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:AssignmentDemo.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:AssignmentDemo.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:AssignmentDemo.API.ValidationAttributes.AlbumTitleShuldNotbeEmpty">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
