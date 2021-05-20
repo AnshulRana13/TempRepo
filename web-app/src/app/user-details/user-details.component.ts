@@ -10,6 +10,7 @@ import { UsersService } from '../services/users.service';
 export class UserDetailsComponent implements OnInit {
    id : string
    user: User
+   isLoaded: boolean;
   constructor(private route: ActivatedRoute,private userService : UsersService) { }
 
   ngOnInit(): void {
@@ -17,7 +18,7 @@ export class UserDetailsComponent implements OnInit {
 
     this.userService.getUser(this.id).subscribe((data:any)=>{
       this.user = data;
-      console.log(data);
+      this.isLoaded = true;
     });
   }
 

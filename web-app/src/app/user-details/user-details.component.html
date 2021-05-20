@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="isLoaded">
     <h1>User Details</h1>
     <hr/>
     <div class="well hoverwell thumbnail">
@@ -8,7 +8,7 @@
        <div>
            <span>Address : {{user?.address.street}}</span>
            <span>&nbsp;</span>
-           <span>{{user?.address.city}}, {{user?.address.zipcode}}</span>
+           <span>{{user?.address.city}} , {{user?.address.zipcode}}</span>
        </div>
     </div>
 </div>

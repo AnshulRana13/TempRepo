@@ -10,6 +10,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class UserComponent implements OnInit {
  //users: any;
   users: User[] =[];
+  isLoaded:boolean;
   
   constructor(private userService : UsersService,private router: Router) {
     
@@ -18,7 +19,7 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
     this.userService.getUsers().subscribe((data: User[])=> {
       this.users = data
-      console.log(this.users);
+      this.isLoaded= true;
     });
   }
 
