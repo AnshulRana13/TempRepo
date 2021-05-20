@@ -14,7 +14,7 @@ using System.Collections;
 using Microsoft.AspNetCore.Mvc;
 
 
-namespace AssignmentDemo.Test.ControllerTest
+namespace AssignmentDemoAPI.Test.ControllerTest
 {
    
     public class UsersControllerTests
