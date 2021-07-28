@@ -119,7 +119,7 @@ namespace AssignmentDemo.Provider.AlbumRequest
 
         }
 
-        public async void AddAlbum(Album album)
+        public async Task AddAlbum(Album album)
         {
             if (_cacheManager.CheckIfKeyExists(albumKey))
             {
@@ -135,7 +135,7 @@ namespace AssignmentDemo.Provider.AlbumRequest
             }
         }
 
-        public async void UpdateAlbumForUser(Album album)
+        public async Task UpdateAlbumForUser(Album album)
         {
             if (_cacheManager.CheckIfKeyExists(albumKey))
             {

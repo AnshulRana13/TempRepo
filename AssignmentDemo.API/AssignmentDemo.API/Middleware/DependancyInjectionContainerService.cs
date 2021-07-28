@@ -15,9 +15,16 @@ using System.Threading.Tasks;
 
 namespace AssignmentDemo.API.Middleware
 {
+    /// <summary>
+    /// Add Dependency Injection Container
+    /// </summary>
     public static class DependancyInjectionContainerService
     {
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="configuration"></param>
         public static void AddDependencyInjectionContainer(this IServiceCollection services,IConfiguration configuration)
         {
 
@@ -29,7 +36,7 @@ namespace AssignmentDemo.API.Middleware
                       services.AddSingleton<ICacheManager, InMemoryCacheManager>();
                       break;
                 case "Redis":
-                    services.AddTransient<ICacheManager, RedisCacheManager>();
+                    services.AddSingleton<ICacheManager, RedisCacheManager>();
                     break;
                 default:
                     throw new NotImplementedException();

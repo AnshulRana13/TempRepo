@@ -8,6 +8,9 @@ using System.Net.Http;
 /// </summary>
 namespace AssignmentDemo.API.Middleware
 {
+    /// <summary>
+    /// Polly container Service 
+    /// </summary>
     public static class PollyContainerService
     {
         public static void AddPollyContainerService(this IServiceCollection services)

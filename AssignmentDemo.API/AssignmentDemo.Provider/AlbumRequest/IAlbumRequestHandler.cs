@@ -13,9 +13,9 @@ namespace AssignmentDemo.Provider.AlbumRequest
         Task<List<Album>> GetAlbumByGroup(int albumId);
 
         Task<bool> AlbumUserExist(int userId);
-        void AddAlbum(Album album);
+        Task AddAlbum(Album album);
 
-        void UpdateAlbumForUser(Album album);
+        Task UpdateAlbumForUser(Album album);
 
         Task<bool> AlbumAndUserExist(int userId, int albumId);
     }
