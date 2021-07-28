@@ -17,7 +17,11 @@ namespace AssignmentDemo.API.Middleware
 {
     public static class DependancyInjectionContainerService
     {
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="configuration1"></param>
         public static void AddDependencyInjectionContainer(this IServiceCollection services,IConfiguration configuration)
         {
 
