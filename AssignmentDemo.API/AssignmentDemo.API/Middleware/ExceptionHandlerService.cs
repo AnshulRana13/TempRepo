@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 
 namespace AssignmentDemo.API.Middleware
 {
+    /// <summary>
+    /// Exception class
+    /// </summary>
     public static class ExceptionHandlerService
     {
         /// <summary>
